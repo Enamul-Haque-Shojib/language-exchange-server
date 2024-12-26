@@ -13,14 +13,19 @@ router.post('/login-user', UserControllers.loginUser);
 
 router.patch('/:userEmail',
     
-      UserControllers.updateOneUser);
+UserControllers.updateOneUser);
 
 router.delete('/:userEmail',
     
-  UserControllers.deleteOneUser);
+ UserControllers.deleteOneUser);
 
 
 router.post('/feedback-user', UserControllers.feedBackUser);
+
 router.get('/feedback', UserControllers.getAllFeedBackUser);
+
+router.post('/tutor-image', UserControllers.tutorImage);
+
+router.get('/img-tutor', UserControllers.getAllTutorImage);
 
 export const UserRoutes = router;

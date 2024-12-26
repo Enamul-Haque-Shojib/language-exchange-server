@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose';
-import { TFeedBack, TUser, UserStaticModel } from './User.type';
+import { TFeedBack, TImageTutor, TUser, UserStaticModel } from './User.type';
 
 const feedBackSchema = new Schema<TFeedBack>({
   feedbackUserPhoto: { type: String, required: true },
@@ -9,6 +9,10 @@ const feedBackSchema = new Schema<TFeedBack>({
     type: String,
     required: true,
   }
+});
+
+const imageTutorSchema = new Schema<TImageTutor>({
+  tutorImage: { type: String, required: true }
 });
 
 const userSchema = new Schema<TUser, UserStaticModel>({
@@ -39,3 +43,5 @@ userSchema.statics.isUserExistsByEmail = async function (email: string) {
 export const UserModel = model<TUser, UserStaticModel>('User', userSchema);
 
 export const FeedBackModel = model<TFeedBack>('FeedBack', feedBackSchema);
+
+export const ImageTutorModel = model<TImageTutor>('FeedBack', imageTutorSchema);

@@ -10,6 +10,10 @@ export type TUser = {
   aboutMe: string;
 };
 
+export type TImageTutor = {
+  tutorImage: string;
+};
+
 export type TFeedBack = {
   feedbackUserPhoto: string;
   name:string;
