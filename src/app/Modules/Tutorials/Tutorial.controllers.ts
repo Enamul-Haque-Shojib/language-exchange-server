@@ -135,6 +135,8 @@ const getAllStudentBooked = catchAsync(async (req, res) => {
     });
   });
 
+
+
 export const TutorialControllers ={
     createTutorial,
     getAllTutorials,
@@ -146,5 +148,6 @@ export const TutorialControllers ={
     studentBookedDelete,
     getAllStudentBooked,
     studentBookedCompleted,
-    teacherStudentDeleted
+    teacherStudentDeleted,
+  
 } 

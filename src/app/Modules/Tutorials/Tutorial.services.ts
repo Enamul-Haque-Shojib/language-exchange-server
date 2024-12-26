@@ -59,13 +59,7 @@ const createTutorialIntoDB = async (payload: TTutorial) => {
       await session.abortTransaction();
       await session.endSession();
       throw new Error(err);
-    }
-
-
-    
-
-    
-   
+    } 
 };
 
 const getSingleTutorialFromDB = async (id: string) => {
@@ -111,20 +105,30 @@ const userTutorialBookedFromDB = async (payload: TUserBooked, id: string) => {
 
 
   const userTutorialReviewIntoDB = async (payload: TUserBooked, id: string) => {
-
     
-    const result = await TutorialModel.findByIdAndUpdate(
-      id,
-      {
-        $push: {
-          userReview: payload,
-        },
-        $inc: {
-          review: 1, 
-        },
+    const tutorial = await TutorialModel.findById(id);
+
+    if (!tutorial) {
+      throw new Error("Tutorial not found");
+    }
+  
+    const emailExists = tutorial.userReview.some((review: any) => review.email === payload.email);
+  
+    const updatePayload: any = {
+      $push: {
+        userReview: payload, 
       },
-      { new: true } 
-    );
+    };
+  
+    if (!emailExists) {
+     
+      updatePayload.$inc = {
+        review: 1,
+      };
+    }
+  
+    // Update the document
+    const result = await TutorialModel.findByIdAndUpdate(id, updatePayload, { new: true });
   
     return result;
   };
@@ -243,6 +247,8 @@ const getAllStudentBookedFromDB = async (query: Record<string, unknown>) => {
   return result;
 
   };
+
+
 
 
 export const TutorialServices = {
