@@ -86,11 +86,37 @@ const getAllFeedBackUser = catchAsync(async(req, res) => {
   })
 });
 
+const createTutorImage = catchAsync(async(req, res) => {
+
+  const result = await UserServices.createTutorImageIntoDB(req.body);
+
+  sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Tutor image created successfully",
+      data: result
+  })
+});
+const getAllTutorImage = catchAsync(async(req, res) => {
+  
+
+  const result = await UserServices.getAllTutorImageIntoDB();
+
+  sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "User feedback retrieve successfully",
+      data: result
+  })
+});
+
 export const UserControllers = {
   registerUser,
   loginUser,
   deleteOneUser,
   updateOneUser,
   feedBackUser,
-  getAllFeedBackUser
+  getAllFeedBackUser,
+  createTutorImage,
+  getAllTutorImage
 };

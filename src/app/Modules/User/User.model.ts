@@ -44,4 +44,4 @@ export const UserModel = model<TUser, UserStaticModel>('User', userSchema);
 
 export const FeedBackModel = model<TFeedBack>('FeedBack', feedBackSchema);
 
-export const ImageTutorModel = model<TImageTutor>('FeedBack', imageTutorSchema);
+export const ImageTutorModel = model<TImageTutor>('TutorImage', imageTutorSchema);

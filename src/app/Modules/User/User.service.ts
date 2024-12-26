@@ -1,5 +1,5 @@
 import { TFeedBack, TUser } from './User.type';
-import { FeedBackModel, UserModel } from './User.model';
+import { FeedBackModel, ImageTutorModel, UserModel } from './User.model';
 import { TutorialModel } from '../Tutorials/Tutorial.model';
 
 
@@ -61,11 +61,28 @@ const getAllFeedBackUserIntoDB = async () => {
 
 };
 
+const createTutorImageIntoDB = async (userData: TFeedBack) => {
+  
+    const result = await ImageTutorModel.create(userData);
+    
+  
+  return result;
+
+};
+const getAllTutorImageIntoDB = async () => {
+    const result = await ImageTutorModel.find();
+    
+  return result;
+
+};
+
 export const UserServices = {
   registerUserIntoDB,
   loginUserIntoDB,
   deleteOneUserFromDB,
   updateOneUserIntoDB,
   feedBackUserIntoDB,
-  getAllFeedBackUserIntoDB
+  getAllFeedBackUserIntoDB,
+  createTutorImageIntoDB,
+  getAllTutorImageIntoDB
 };
