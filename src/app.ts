@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(cors({
     origin: [
         'http://localhost:5173',
+        'https://language-exchange-68268.web.app'
         
     ],
     credentials: true

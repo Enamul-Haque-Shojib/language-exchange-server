@@ -102,8 +102,6 @@ const userTutorialBookedFromDB = async (payload: TUserBooked, id: string) => {
     return result;
   };
 
-
-
   const userTutorialReviewIntoDB = async (payload: TUserBooked, id: string) => {
     
     const tutorial = await TutorialModel.findById(id);

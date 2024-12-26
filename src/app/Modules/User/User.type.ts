@@ -31,4 +31,5 @@ export interface UserStaticModel extends Model<TUser> {
 }
 
 
+
 export type TUserRole = keyof typeof USER_ROLE;
