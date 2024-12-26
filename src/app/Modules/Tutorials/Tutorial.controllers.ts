@@ -100,6 +100,8 @@ const getSingleTutorials = catchAsync(async (req, res) => {
       data: result,
     });
   });
+
+
 const deleteSingleTutorial = catchAsync(async (req, res) => {
     const result = await TutorialServices.deleteSingleTutorialsFromDB(req.params.id);
   
@@ -110,6 +112,9 @@ const deleteSingleTutorial = catchAsync(async (req, res) => {
       data: result,
     });
   });
+
+
+
 const getAllTutorials = catchAsync(async (req, res) => {
 
     const result = await TutorialServices.getAllTutorialsFromDB(req.query);
@@ -121,6 +126,8 @@ const getAllTutorials = catchAsync(async (req, res) => {
       data: result,
     });
   });
+
+  
 
 const getAllStudentBooked = catchAsync(async (req, res) => {
     const result = await TutorialServices.getAllStudentBookedFromDB(req.query);
