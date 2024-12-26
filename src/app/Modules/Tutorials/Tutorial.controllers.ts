@@ -89,8 +89,6 @@ const teacherStudentDeleted = catchAsync(async (req, res) => {
       data: result,
     });
   });
-
-
   
 const getSingleTutorials = catchAsync(async (req, res) => {
     const result = await TutorialServices.getSingleTutorialFromDB(req.params.id);

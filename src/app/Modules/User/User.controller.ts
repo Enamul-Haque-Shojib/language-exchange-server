@@ -98,7 +98,6 @@ const createTutorImage = catchAsync(async(req, res) => {
   })
 });
 const getAllTutorImage = catchAsync(async(req, res) => {
-  
 
   const result = await UserServices.getAllTutorImageIntoDB();
 

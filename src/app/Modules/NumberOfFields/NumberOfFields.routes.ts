@@ -2,8 +2,6 @@
 import express from 'express';
 import { NumberOfFieldsControllers } from './NumberOfFields.controllers';
 
-
-
 const router = express.Router();
 
 router.get('/stats', NumberOfFieldsControllers.getNumberOfStats);
