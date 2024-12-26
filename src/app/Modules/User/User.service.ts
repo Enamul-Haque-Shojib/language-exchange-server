@@ -45,7 +45,6 @@ const updateOneUserIntoDB = async (email: string, userData: Partial<TUser>) => {
 };
 
 
-
 const feedBackUserIntoDB = async (userData: TFeedBack) => {
   
     const feedBack = await FeedBackModel.create(userData);
@@ -65,7 +64,6 @@ const createTutorImageIntoDB = async (userData: TFeedBack) => {
   
     const result = await ImageTutorModel.create(userData);
     
-  
   return result;
 
 };
