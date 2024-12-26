@@ -2,9 +2,6 @@ import { TFeedBack, TUser } from './User.type';
 import { FeedBackModel, ImageTutorModel, UserModel } from './User.model';
 import { TutorialModel } from '../Tutorials/Tutorial.model';
 
-
-
-
 const registerUserIntoDB = async (userData: TUser) => {
 
   let user = await UserModel.isUserExists(userData.email);
