@@ -4,11 +4,8 @@ import catchAsync from "../../utils/catchAsync";
 import sendResponse from "../../utils/sendResponse";
 import { TokenAccessServices } from "./TokenAccess.services";
 
-
-
 const createToken = catchAsync(async (req, res) => {
 
-    
     const result = await TokenAccessServices.createTokenFromJWT(req.body);
     const { accessToken, role } = result;
   
@@ -18,7 +15,6 @@ const createToken = catchAsync(async (req, res) => {
       sameSite: 'strict',
       
     });
-  
   
     sendResponse(res, {
       statusCode: 200,
