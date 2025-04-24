@@ -7,8 +7,6 @@ import { TutorialServices } from "./Tutorial.services";
 const createTutorial = catchAsync(async(req, res) => {
     const result = await TutorialServices.createTutorialIntoDB(req.body);
 
-    
-
     sendResponse(res, {
         statusCode: 200,
         success: true,

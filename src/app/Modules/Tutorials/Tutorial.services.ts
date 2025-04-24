@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import mongoose from "mongoose";
 import QueryBuilder from "../../builder/QueryBuilder";
@@ -6,7 +7,6 @@ import { TTutorial, TUserBooked } from "./Tutorial.interface";
 import { TutorialModel } from "./Tutorial.model";
 import { CategoryModel } from "../Category/Category.model";
 import AppError from "../../errors/AppError";
-
 
 
 const createTutorialIntoDB = async (payload: TTutorial) => {

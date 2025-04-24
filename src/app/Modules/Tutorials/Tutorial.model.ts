@@ -3,7 +3,6 @@ import { TTutorial, TUserBooked, TUserReview, TutorialStaticModel } from "./Tuto
 import { Days, DaysNumber } from "./Tutorial.constant";
 
 
-
 const userBookedSchema = new Schema<TUserBooked>(
     {
       email: {
