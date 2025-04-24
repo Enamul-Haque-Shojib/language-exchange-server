@@ -2,8 +2,6 @@ import { CategoryServices } from "../Category/Category.services";
 import { TutorialServices } from "../Tutorials/Tutorial.services";
 import { UserModel } from "../User/User.model";
 
-
-
 const getNumberOfStatsFromDB = async () => {
     
     const languagesData = await CategoryServices.getAllCategoriesFromDB();
@@ -65,16 +63,11 @@ const getNumberOfLanguageTeacherFromDB = async () => {
       numberOfLanguageTeacherList.push({title : language.title, count: countTeacher});
     })
 
-    
-   
-
     return numberOfLanguageTeacherList;
   };
 
 
   const getNumberOfTeacherDetailsFromDB = async (email: string) => {
-
-  
 
     const tutorialsData = await TutorialServices.getAllTutorialsFromDB({email});
     
