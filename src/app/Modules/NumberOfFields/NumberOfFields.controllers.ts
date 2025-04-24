@@ -2,9 +2,6 @@ import catchAsync from "../../utils/catchAsync";
 import sendResponse from "../../utils/sendResponse";
 import { NumberOfFieldsServices } from "./NumberOfFields.services";
 
-
-
-
 const getNumberOfStats = catchAsync(async (req, res) => {
     const result = await NumberOfFieldsServices.getNumberOfStatsFromDB();
 
