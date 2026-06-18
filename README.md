@@ -22,6 +22,16 @@
 ### Frontend: React js, Firebase, tailwind , react router dom
 ### Backend: express js, typescript, jwt, mongoose
 
+### **Credentials**
+ #### Tutor:
+ - email: tutor@gmail.com
+ - pass: 123456789Tutor
+ 
+ #### Student:
+ - email: student@gmail.com
+ - pass: 123456789Student
+
+
 
    
  
